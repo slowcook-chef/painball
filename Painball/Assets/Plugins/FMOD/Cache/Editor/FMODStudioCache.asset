@@ -15,10 +15,114 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638635420197998773
+  lastModified: 638639386639685288
   FileSizes:
   - Name: 
-    Value: 752
+    Value: 1096
+  Exists: 1
+--- !u!114 &-3239136303180314046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/plunger_draw
+  m_EditorClassIdentifier: 
+  Name: plunger_draw
+  StudioPath: parameter:/plunger_draw
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1152327665
+    data2: 2518369860
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1439532697708500253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/plunger_draw_release
+  m_EditorClassIdentifier: 
+  Path: event:/plunger_draw_release
+  Guid:
+    Data1: -1802507320
+    Data2: 1161858886
+    Data3: -1786586973
+    Data4: -292938846
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1181498848935817944}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1414457387183460421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/plunger_draw_lp
+  m_EditorClassIdentifier: 
+  Path: event:/plunger_draw_lp
+  Guid:
+    Data1: 2066144155
+    Data2: 1221988968
+    Data3: -1724473667
+    Data4: 1699700572
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 536011391653605596}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 10000
+--- !u!114 &-1181498848935817944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/plunger_draw_release/plunger_draw
+  m_EditorClassIdentifier: 
+  Name: plunger_draw
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1152327665
+    data2: 2518369860
+  Type: 0
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -37,13 +141,68 @@ MonoBehaviour:
   - {fileID: 4533605037137124591}
   EditorEvents:
   - {fileID: 5639007457564039591}
-  EditorParameters: []
+  - {fileID: 1815221211120660529}
+  - {fileID: -1414457387183460421}
+  - {fileID: -1439532697708500253}
+  EditorParameters:
+  - {fileID: -3239136303180314046}
   MasterBanks:
   - {fileID: 4533605037137124591}
   StringsBanks:
   - {fileID: -5311386387908567534}
-  cacheTime: 638635420197998773
+  cacheTime: 638639386639685288
   cacheVersion: 131620
+--- !u!114 &536011391653605596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/plunger_draw_lp/plunger_draw
+  m_EditorClassIdentifier: 
+  Name: plunger_draw
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1152327665
+    data2: 2518369860
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &1815221211120660529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/plunger_draw_begin
+  m_EditorClassIdentifier: 
+  Path: event:/plunger_draw_begin
+  Guid:
+    Data1: 411145800
+    Data2: 1099053415
+    Data3: -1987793742
+    Data4: 1988410807
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 188
 --- !u!114 &4533605037137124591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59,7 +218,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638635420197978791
+  lastModified: 638639386639674992
   FileSizes: []
   Exists: 1
 --- !u!114 &5639007457564039591

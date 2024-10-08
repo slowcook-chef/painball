@@ -9,6 +9,10 @@ public class LaunchZone : MonoBehaviour
     public Transform launchPointer;
     public float maxForce;
 
+    //FMOD event variables
+    private FMOD.Studio.EventInstance audio_plunger_draw_begin;
+    private FMOD.Studio.EventInstance audio_plunger_draw_release;
+    private FMOD.Studio.EventInstance audio_plunger_draw_lp;
 
     [Range(1f, 5f)]
     public float maxTimeToCharge = 3f;
@@ -20,6 +24,12 @@ public class LaunchZone : MonoBehaviour
     void Start()
     {
         boxCollider = GetComponent<BoxCollider>();
+
+        //setting FMOD event variable values
+        audio_plunger_draw_begin = FMODUnity.RuntimeManager.CreateInstance("event:/plunger_draw_begin");
+        audio_plunger_draw_release = FMODUnity.RuntimeManager.CreateInstance("event:/plunger_draw_release");
+        audio_plunger_draw_lp = FMODUnity.RuntimeManager.CreateInstance("event:/plunger_draw_lp");
+
     }
 
     private Rigidbody CheckForBallInZone()
@@ -65,16 +75,38 @@ public class LaunchZone : MonoBehaviour
         if(Input.GetKey(KeyCode.Space)){
             timeElapsed += Time.deltaTime;
             print("Charge: %"+TimeToCharge());
+
+            //audio
+            //audio_plunger_draw_lp.setParameterByName("plunger_draw", TimeToCharge());
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("plunger_draw", TimeToCharge());
         }
         if(Input.GetKeyUp(KeyCode.Space)){
             Launch(TimeToCharge());
             timeElapsed = 0;
+
+            //audio
+            audio_plunger_draw_release.start(); //play plunger release audio
+            audio_plunger_draw_lp.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT); //stop the plunger draw loop when letting go of spacebar
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            //audio
+            audio_plunger_draw_begin.start(); //play the plunger draw begin audio
+            audio_plunger_draw_lp.start(); //begin the plunger draw loop
         }
     }
 
     private float TimeToCharge(){
         float result = Mathf.Lerp(0,1, timeElapsed/maxTimeToCharge);
         return result;
+    }
+
+    private void OnDestroy()
+    {
+        //release loaded audio from memory
+        audio_plunger_draw_lp.release();
+        audio_plunger_draw_release.release();
+        audio_plunger_draw_begin.release();
     }
 
 }
