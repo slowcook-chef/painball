@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallReset : MonoBehaviour
@@ -14,5 +15,7 @@ public class BallReset : MonoBehaviour
             other.GetComponent<Rigidbody>().velocity = Vector3.zero; // Reset the velocity
         }
     }
+
+    
 }
 
