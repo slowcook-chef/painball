@@ -8,6 +8,14 @@ public class LaunchZone : MonoBehaviour
     private BoxCollider boxCollider;
     public Transform launchPointer;
     public float maxForce;
+
+
+    [Range(1f, 5f)]
+    public float maxTimeToCharge = 3f;
+
+
+    [Range(0.0f, 1f)]
+    private float timeElapsed = 0 ;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +48,6 @@ public class LaunchZone : MonoBehaviour
             //No ball detected in launch zone
             return;
         }
-        print("Launch");
         //calculate desired launch direction
         Vector3 direction = launchPointer.position - this.transform.position;
         direction = direction.normalized;
@@ -53,10 +60,21 @@ public class LaunchZone : MonoBehaviour
         ball.AddForce(direction, ForceMode.Impulse);
     }
     
+    //Detect input
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Launch(1);
-            
+        if(Input.GetKey(KeyCode.Space)){
+            timeElapsed += Time.deltaTime;
+            print("Charge: %"+TimeToCharge());
+        }
+        if(Input.GetKeyUp(KeyCode.Space)){
+            Launch(TimeToCharge());
+            timeElapsed = 0;
         }
     }
+
+    private float TimeToCharge(){
+        float result = Mathf.Lerp(0,1, timeElapsed/maxTimeToCharge);
+        return result;
+    }
+
 }
