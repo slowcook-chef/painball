@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-using UnityEngine;
-
 public class ScoringObject : MonoBehaviour
 {
     public int scoreValue = 100;  // Score awarded when hit

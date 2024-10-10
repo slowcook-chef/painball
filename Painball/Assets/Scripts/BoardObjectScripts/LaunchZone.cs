@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class LaunchZone : MonoBehaviour
 {
-    private BoxCollider boxCollider;
+    private BoxCollider2D boxCollider;
     public Transform launchPointer;
     public float maxForce;
 
@@ -23,7 +23,7 @@ public class LaunchZone : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boxCollider = GetComponent<BoxCollider>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
         //setting FMOD event variable values
         audio_plunger_draw_begin = FMODUnity.RuntimeManager.CreateInstance("event:/plunger_draw_begin");
@@ -32,49 +32,47 @@ public class LaunchZone : MonoBehaviour
 
     }
 
-    private Rigidbody CheckForBallInZone()
+    private Rigidbody2D CheckForBallInZone()
     {
         // Get the center and size of the BoxCollider
-        Vector3 boxCenter = boxCollider.transform.position + boxCollider.center;
-        Vector3 boxSize = boxCollider.size / 2;
+        Vector2 boxCenter = boxCollider.transform.TransformPoint(boxCollider.offset);
+        Vector2 boxSize = boxCollider.size;
 
         // Detect all colliders inside the BoxCollider
-        Collider[] colliders = Physics.OverlapBox(boxCenter, boxSize, boxCollider.transform.rotation);
+        Collider2D[] colliders = Physics2D.OverlapAreaAll(boxCenter, boxCenter + boxCollider.size);
 
-        // Process the detected colliders
-        foreach (Collider collider in colliders)
-        {
+        foreach(Collider2D collider in colliders)
+            // Process the detected colliders
             if(collider.gameObject.tag == "Ball"){
-                return collider.gameObject.GetComponent<Rigidbody>();
+                return collider.gameObject.GetComponent<Rigidbody2D>();
             }
-        }
         return null;
     }
 
     public void Launch(float charge){
-        Rigidbody ball = CheckForBallInZone();
+        Rigidbody2D ball = CheckForBallInZone();
         if(ball==null){
             print("No Balls");
             //No ball detected in launch zone
             return;
         }
         //calculate desired launch direction
-        Vector3 direction = launchPointer.position - this.transform.position;
+        Vector2 direction = launchPointer.position - this.transform.position;
         direction = direction.normalized;
 
-        //Calculate force
+        //Calculate direction * force * charge
         direction *= maxForce;
         direction *= charge;
 
         //Exert force on ball
-        ball.AddForce(direction, ForceMode.Impulse);
+        ball.AddForce(direction, ForceMode2D.Impulse);
     }
     
     //Detect input
     private void Update(){
         if(Input.GetKey(KeyCode.Space)){
             timeElapsed += Time.deltaTime;
-            print("Charge: %"+TimeToCharge());
+            //print("Charge: %"+TimeToCharge());
 
             //audio
             //audio_plunger_draw_lp.setParameterByName("plunger_draw", TimeToCharge());
