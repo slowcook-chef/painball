@@ -17,12 +17,12 @@ public class FlipperControl : MonoBehaviour
     {
         JointMotor2D motor = hinge.motor;
 
-        
+        // Check if the flipper is in the resting position
         if (Input.GetKey(key))
         {
             motor.motorSpeed = force; // Move the flipper when key is pressed
         }
-        else if (hinge.angle > 0) // Adjust this condition based on your flipper's design
+        else if (transform.rotation.eulerAngles.z > 0) // Check the angle using the transform's rotation
         {
             motor.motorSpeed = -force; // Move back to the resting position
         }
