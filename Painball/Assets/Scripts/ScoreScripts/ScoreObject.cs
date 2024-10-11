@@ -20,14 +20,14 @@ public class ScoringObject : MonoBehaviour
         if (collider.gameObject.CompareTag("Ball"))  // Check if the colliding object is the ball
         {
             ScoreManager.instance.AddScore(scoreValue);  // Add score
+            Debug.Log("Ball hit scoring object. Score added: " + scoreValue); // Debug log
 
             // Play hit sound if it's set
             if (hitSound != null && audioSource != null)
             {
                 audioSource.PlayOneShot(hitSound);
+                Debug.Log("Hit sound played.");
             }
-
-
         }
     }
 }

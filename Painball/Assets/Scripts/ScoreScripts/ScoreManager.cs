@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -26,7 +26,8 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        UpdateScoreText();
+        UpdateScoreText(); // Call to update the displayed score
+        Debug.Log("Score increased: " + score); // Print to console
     }
 
     // Update the UI text element with the current score
@@ -34,7 +35,8 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Score: " + score.ToString(); // Update UI
         }
+        Debug.Log("Score updated in UI: " + score); // Print to console
     }
 }
