@@ -14,7 +14,7 @@ public class LaunchZone : MonoBehaviour
     private FMOD.Studio.EventInstance audio_plunger_draw_release;
     private FMOD.Studio.EventInstance audio_plunger_draw_lp;
 
-    [Range(1f, 5f)]
+    [Range(0.1f, 5f)]
     public float maxTimeToCharge = 3f;
 
 
