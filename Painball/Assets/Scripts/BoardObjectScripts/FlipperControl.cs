@@ -1,39 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FlipperControl : MonoBehaviour
 {
-    public KeyCode key = KeyCode.Z; // Default key is Z for the left flipper
-    public float launchForce = 500f; // Force when flipping
-    public float restingAngle = 0f; // The angle where the flipper rests
-    public float maxFlipAngle = 45f; // Maximum angle the flipper can flip to
+    public KeyCode key; // Assign key in the Inspector for each flipper
+    public float launchForce = 1000f; // Force for flipping
+    public float restingAngle = 0f; // Resting position angle 
+    public float maxFlipAngle = 45f; // Max flipping angle 
+    public float motorTorque = 2000f; // Torque for motor
 
     private HingeJoint2D hinge;
 
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
+
+        // Configure hinge limits for flipper movement
+        JointAngleLimits2D limits = hinge.limits;
+        limits.min = restingAngle;  // Minimum angle (resting position)
+        limits.max = maxFlipAngle;  // Maximum angle (flipping position)
+        hinge.limits = limits;
+        hinge.useLimits = true;    // Use the limits to restrict movement
+
+        // Enable the motor for the hinge joint
+        hinge.useMotor = true;
     }
 
     void Update()
     {
-        JointMotor2D motor = hinge.motor;
-        float currentAngle = hinge.angle;
+        JointMotor2D motor = hinge.motor;  // Access motor settings
+        motor.maxMotorTorque = motorTorque;  // Set the torque for the motor
 
-        if (Input.GetKey(key) && currentAngle < maxFlipAngle) // Only flip if under max angle
+        // Check if the assigned key is pressed
+        if (Input.GetKey(key))
         {
-            motor.motorSpeed = launchForce; // Flip when key is pressed
-        }
-        else if (currentAngle > restingAngle) // Move back to resting position
-        {
-            motor.motorSpeed = -launchForce; // Move back to the resting position
+            motor.motorSpeed = launchForce;  // Flip upwards
         }
         else
         {
-            motor.motorSpeed = 0; // Stop the motor when at resting position
+            motor.motorSpeed = -launchForce * 0.5f;  // Return to resting position
         }
 
-        hinge.motor = motor;
+        hinge.motor = motor;  
     }
 }
