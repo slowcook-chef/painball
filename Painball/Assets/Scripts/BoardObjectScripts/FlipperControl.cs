@@ -9,10 +9,13 @@ public class FlipperControl : MonoBehaviour
     public float motorTorque = 2000f; // Torque for motor
 
     private HingeJoint2D hinge;
+    private JointMotor2D motor;
 
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
+        motor = hinge.motor;  // Access motor settings
+        motor.maxMotorTorque = motorTorque;  // Set the torque for the motor
 
         // Configure hinge limits for flipper movement
         JointAngleLimits2D limits = hinge.limits;
@@ -27,9 +30,6 @@ public class FlipperControl : MonoBehaviour
 
     void Update()
     {
-        JointMotor2D motor = hinge.motor;  // Access motor settings
-        motor.maxMotorTorque = motorTorque;  // Set the torque for the motor
-
         // Check if the assigned key is pressed
         if (Input.GetKey(key))
         {
