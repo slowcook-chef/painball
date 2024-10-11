@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,9 +16,9 @@ public class ScoringObject : MonoBehaviour
     }
 
     // Use OnTriggerEnter2D for 2D collision detection
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (collider.gameObject.CompareTag("Ball"))  // Check if the colliding object is the ball
+        if (collision2D.gameObject.CompareTag("Ball"))  // Check if the colliding object is the ball
         {
             ScoreManager.instance.AddScore(scoreValue);  // Add score
             Debug.Log("Ball hit scoring object. Score added: " + scoreValue); // Debug log
@@ -30,4 +31,5 @@ public class ScoringObject : MonoBehaviour
             }
         }
     }
+
 }

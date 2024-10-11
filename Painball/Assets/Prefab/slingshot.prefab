@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7710323715056512301}
   - component: {fileID: 4234277210641774981}
   - component: {fileID: 3687951754934067225}
+  - component: {fileID: -1734581137118179395}
   m_Layer: 0
   m_Name: slingshot
   m_TagString: Untagged
@@ -94,7 +95,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 6676505521310173727}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: dddf209d3ed80d449ab5ba3e6c9c8347, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -152,3 +153,17 @@ PolygonCollider2D:
       - {x: -0.575, y: -1.4649999}
       - {x: -0.515, y: -1.435}
   m_UseDelaunayMesh: 0
+--- !u!114 &-1734581137118179395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676505521310173727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7cd1cb977db8b41a143350c3c54fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 50
+  hitSound: {fileID: 0}

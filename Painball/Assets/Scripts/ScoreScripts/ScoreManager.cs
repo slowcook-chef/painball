@@ -15,6 +15,7 @@ public class ScoreManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;  // Set the singleton instance
+            UpdateScoreText();
         }
         else
         {
@@ -27,7 +28,7 @@ public class ScoreManager : MonoBehaviour
     {
         score += value;
         UpdateScoreText(); // Call to update the displayed score
-        Debug.Log("Score increased: " + score); // Print to console
+        print("Score increased: " + score); // Print to console
     }
 
     // Update the UI text element with the current score
@@ -37,6 +38,6 @@ public class ScoreManager : MonoBehaviour
         {
             scoreText.text = "Score: " + score.ToString(); // Update UI
         }
-        Debug.Log("Score updated in UI: " + score); // Print to console
+        print("Score updated in UI: " + score); // Print to console
     }
 }
