@@ -11,6 +11,10 @@ public class FlipperControl : MonoBehaviour
     private HingeJoint2D hinge;
     private JointMotor2D motor;
 
+    //audio events
+    private FMOD.Studio.EventInstance audio_flipper_up;
+    private FMOD.Studio.EventInstance audio_flipper_down;
+
     void Start()
     {
         hinge = GetComponent<HingeJoint2D>();
@@ -26,6 +30,12 @@ public class FlipperControl : MonoBehaviour
 
         // Enable the motor for the hinge joint
         hinge.useMotor = true;
+
+        //audio assigning audio events
+        audio_flipper_up = FMODUnity.RuntimeManager.CreateInstance("event:/flipper_up");
+        audio_flipper_down = FMODUnity.RuntimeManager.CreateInstance("event:/flipper_down");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_up, transform, GetComponent<Rigidbody2D>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_down, transform, GetComponent<Rigidbody2D>());
     }
 
     void Update()
@@ -40,6 +50,22 @@ public class FlipperControl : MonoBehaviour
             motor.motorSpeed = -launchForce * 0.5f;  // Return to resting position
         }
 
-        hinge.motor = motor;  
+        hinge.motor = motor;
+
+        //AUDIO
+        if (Input.GetKeyDown(key))
+        {
+            audio_flipper_up.start();
+        }
+        if (Input.GetKeyUp(key))
+        {
+            audio_flipper_down.start();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        audio_flipper_up.release();
+        audio_flipper_down.release();
     }
 }

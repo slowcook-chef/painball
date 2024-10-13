@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8299530364634048295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/flipper_up
+  m_EditorClassIdentifier: 
+  Path: event:/flipper_up
+  Guid:
+    Data1: 339697265
+    Data2: 1115127684
+    Data3: 1715914402
+    Data4: 399695682
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5311386387908567534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,38 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638639853033987241
+  lastModified: 638643651612411888
   FileSizes:
   - Name: 
-    Value: 1096
+    Value: 1268
   Exists: 1
+--- !u!114 &-4156325243165923582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/bumper_hit
+  m_EditorClassIdentifier: 
+  Path: event:/bumper_hit
+  Guid:
+    Data1: -1715056675
+    Data2: 1200863215
+    Data3: 659186581
+    Data4: 2075030314
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3239136303180314046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,6 +98,33 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-2258620949063524944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/flipper_down
+  m_EditorClassIdentifier: 
+  Path: event:/flipper_down
+  Guid:
+    Data1: -1789693292
+    Data2: 1291680864
+    Data3: -1993772871
+    Data4: -401160545
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1439532697708500253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,13 +225,17 @@ MonoBehaviour:
   - {fileID: 1815221211120660529}
   - {fileID: -1414457387183460421}
   - {fileID: -1439532697708500253}
+  - {fileID: -8299530364634048295}
+  - {fileID: -2258620949063524944}
+  - {fileID: 6954628386998901069}
+  - {fileID: -4156325243165923582}
   EditorParameters:
   - {fileID: -3239136303180314046}
   MasterBanks:
   - {fileID: 4533605037137124591}
   StringsBanks:
   - {fileID: -5311386387908567534}
-  cacheTime: 638639853033987241
+  cacheTime: 638643651612411888
   cacheVersion: 131620
 --- !u!114 &536011391653605596
 MonoBehaviour:
@@ -218,7 +303,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638639853033977146
+  lastModified: 638643651612391892
   FileSizes: []
   Exists: 1
 --- !u!114 &5639007457564039591
@@ -248,3 +333,30 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 8800
+--- !u!114 &6954628386998901069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/slingshot_hit
+  m_EditorClassIdentifier: 
+  Path: event:/slingshot_hit
+  Guid:
+    Data1: -1622156448
+    Data2: 1173147828
+    Data3: 283903645
+    Data4: 1307087670
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
