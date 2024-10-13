@@ -18,7 +18,7 @@ public class Slingshot : MonoBehaviour
 
         //audio assign audio events
         audio_slingshot_hit = FMODUnity.RuntimeManager.CreateInstance("event:/slingshot_hit");
-
+        //attach audio location to object location
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_slingshot_hit, transform, GetComponent<Rigidbody2D>());
     }
 
@@ -30,12 +30,14 @@ public class Slingshot : MonoBehaviour
         {
             rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
 
+            //audio play slingshot hit audio
             audio_slingshot_hit.start();
         }
     }
 
     private void OnDestroy()
     {
+        //audio release from memory on object destroy
         audio_slingshot_hit.release();
     }
 
