@@ -173,6 +173,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &77754439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 371579244123170061, guid: 603a4bd7c8740fd4f81398864092f439,
+    type: 3}
+  m_PrefabInstance: {fileID: 1939909391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &82353570
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +689,7 @@ Transform:
   m_GameObject: {fileID: 367467090}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 1}
+  m_LocalPosition: {x: 10, y: -2.52, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1717,6 +1723,51 @@ Transform:
   - {fileID: 981930308}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1480761729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480761731}
+  - component: {fileID: 1480761730}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1480761730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480761729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4ffe9b3c75c26409a9d2dc7f656251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boardParent: {fileID: 77754439}
+--- !u!4 &1480761731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480761729}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.390835, y: 1.69257, z: 4.3923836}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1519920338
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,8 +1953,8 @@ Transform:
   m_GameObject: {fileID: 1693415195}
   serializedVersion: 2
   m_LocalRotation: {x: -0.69650894, y: -0, z: -0, w: 0.7175482}
-  m_LocalPosition: {x: 10, y: 4.35, z: 6.44}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 10, y: 3.47, z: 6.44}
+  m_LocalScale: {x: 1, y: 1, z: 1.7226}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 425700870}
@@ -2135,7 +2186,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: Tutorial Beaten
+  conversation: Spinny Hello
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -2205,7 +2256,7 @@ Transform:
   m_GameObject: {fileID: 1699179735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.65, y: 1.091, z: 0.295}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2286,10 +2337,10 @@ MonoBehaviour:
   onExecute:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 774231398}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1480761730}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: ShowBoard
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2654,6 +2705,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Board Parent
       objectReference: {fileID: 0}
+    - target: {fileID: 371579244123170061, guid: 603a4bd7c8740fd4f81398864092f439,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 644994688185030717, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2677,12 +2733,12 @@ PrefabInstance:
     - target: {fileID: 644994688185030717, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.09
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 644994688185030717, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.58641815
+      value: 1.48
       objectReference: {fileID: 0}
     - target: {fileID: 644994688185030717, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
@@ -5745,3 +5801,4 @@ SceneRoots:
   - {fileID: 1694809671}
   - {fileID: 1975136429}
   - {fileID: 1939909391}
+  - {fileID: 1480761731}
