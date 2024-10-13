@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7810510760976777198}
   - component: {fileID: 2752404395384963468}
   - component: {fileID: 8007877324555973614}
+  - component: {fileID: 2213306282239639935}
   m_Layer: 0
   m_Name: slingface
   m_TagString: Untagged
@@ -146,6 +147,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aimTransform: {fileID: 2955530611422011211}
   launchForce: 500
+--- !u!114 &2213306282239639935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4964258500001118448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7cd1cb977db8b41a143350c3c54fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreValue: 100
+  hitSound: {fileID: 0}
 --- !u!1 &6676505521310173727
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,8 +172,6 @@ GameObject:
   - component: {fileID: 7710323715056512301}
   - component: {fileID: 4234277210641774981}
   - component: {fileID: 3687951754934067225}
-  - component: {fileID: -1734581137118179395}
-  - component: {fileID: -4740293878036914413}
   m_Layer: 0
   m_Name: slingshot
   m_TagString: Untagged
@@ -301,34 +314,6 @@ PolygonCollider2D:
       - {x: -0.575, y: -1.4649999}
       - {x: -0.515, y: -1.435}
   m_UseDelaunayMesh: 0
---- !u!114 &-1734581137118179395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676505521310173727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf7cd1cb977db8b41a143350c3c54fa2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreValue: 50
-  hitSound: {fileID: 0}
---- !u!114 &-4740293878036914413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6676505521310173727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 740720ea4bab86246945efd3be7b4420, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aimTransform: {fileID: 0}
-  launchForce: 25
 --- !u!1 &8669961572980435650
 GameObject:
   m_ObjectHideFlags: 0
