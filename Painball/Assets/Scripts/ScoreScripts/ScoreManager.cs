@@ -1,24 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance; // instance
+    public static ScoreManager instance; // Singleton instance
     public int score = 0;  // Player's current score
-    public Text scoreText; // UI Text to display the score
+    public TMP_Text scoreText; // TMPro component to display the score
 
     // Ensure that only one instance of ScoreManager exists
     void Awake()
     {
         if (instance == null)
         {
-            instance = this;  // Set the one true and holy instance
+            instance = this;  // Set the singleton instance
+            UpdateScoreText();
         }
         else
         {
-            Destroy(gameObject);  // Protects our holy singleton existence 
+            Destroy(gameObject);  // Protects the singleton existence 
         }
     }
 
@@ -26,7 +27,8 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int value)
     {
         score += value;
-        UpdateScoreText();
+        UpdateScoreText(); // Call to update the displayed score
+        print("Score increased: " + score); // Print to console
     }
 
     // Update the UI text element with the current score
@@ -34,7 +36,8 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString();
+            scoreText.text = "Score: " + score.ToString(); // Update UI
         }
+        print("Score updated in UI: " + score); // Print to console
     }
 }

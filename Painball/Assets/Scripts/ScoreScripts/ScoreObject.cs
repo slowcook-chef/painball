@@ -1,33 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ScoreObject : MonoBehaviour
+public class ScoringObject : MonoBehaviour
 {
-    public int scoreValue = 100;  // Customizable score value for each object
-    public AudioClip hitSound;    // Customizable hit sound for each object. May need to be changed for our audio pipeleine. 
+    public int scoreValue = 100;  // Score awarded when hit
+    public AudioClip hitSound;     // Sound effect for when the object is hit
     private AudioSource audioSource;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>(); // Get the AudioSource for playing sound
+        audioSource = GetComponent<AudioSource>(); // Get the AudioSource component
     }
 
-    // Triggered when the ball collides with this object
-    void OnCollisionEnter(Collision collision)
+    // Use OnTriggerEnter2D for 2D collision detection
+    void OnCollisionEnter2D(Collision2D collision2D)
     {
-        if (collision.gameObject.tag == "Ball")  // Check if the colliding object is the ball
+        if (collision2D.gameObject.CompareTag("Ball"))  // Check if the colliding object is the ball
         {
-            ScoreManager.instance.AddScore(scoreValue);  // Add score based on the object's score value
+            ScoreManager.instance.AddScore(scoreValue);  // Add score
+            Debug.Log("Ball hit scoring object. Score added: " + scoreValue); // Debug log
 
-            // Play hit sound (if set)
+            // Play hit sound if it's set
             if (hitSound != null && audioSource != null)
             {
-                audioSource.PlayOneShot(hitSound);  // Play the sound when hit
+                audioSource.PlayOneShot(hitSound);
+                Debug.Log("Hit sound played.");
             }
-
-            // Optionally, add other effects like flashing lights, particle effects, etc.
         }
     }
+
 }
