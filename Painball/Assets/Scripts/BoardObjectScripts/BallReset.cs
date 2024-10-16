@@ -10,16 +10,38 @@ public class BallReset : MonoBehaviour
 
     public Transform resetPosition; // Set this to where you want the ball to respawn
 
+    //audio events
+    FMOD.Studio.EventInstance audio_ball_sink;
+    FMOD.Studio.EventInstance audio_ambience_oneshot_scary;
+
+    private void Start()
+    {
+        //audio assign audio events
+        audio_ball_sink = FMODUnity.RuntimeManager.CreateInstance("event:/ball_sink");
+        audio_ambience_oneshot_scary = FMODUnity.RuntimeManager.CreateInstance("event:/ambience_oneshots_scary");
+        //attach audio location to object location
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_ball_sink, transform, GetComponent<Rigidbody2D>());
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Ball")) // Make sure the ball has the "Ball" tag
         {
             other.transform.position = resetPosition.position; // Move the ball to the spawn position
             other.GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Reset the velocity
+
+            //audio events
+            audio_ambience_oneshot_scary.start();
+            audio_ball_sink.start();
         }
     }
 
+    private void OnDestroy()
+    {
+        audio_ambience_oneshot_scary.release();
+        audio_ball_sink.release();
+    }
 
-    
+
 }
 
