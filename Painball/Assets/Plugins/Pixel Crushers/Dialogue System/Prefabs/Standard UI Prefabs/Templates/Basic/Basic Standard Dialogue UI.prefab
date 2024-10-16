@@ -276,6 +276,7 @@ MonoBehaviour:
     panel: {fileID: 11457502}
     alertText:
       m_uiText: {fileID: 11411984}
+      m_textMeshProUGUI: {fileID: 0}
     queueAlerts: 1
     dontQueueDuplicates: 0
     waitForHideAnimation: 1
@@ -671,8 +672,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 71384f4df9e2a8d4fb5d94a97852aa14, type: 3}
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -680,7 +681,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2.58
 --- !u!225 &22512050
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -791,8 +792,10 @@ MonoBehaviour:
   portraitImage: {fileID: 11422712}
   portraitName:
     m_uiText: {fileID: 11456524}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 11445008}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -1862,8 +1865,10 @@ MonoBehaviour:
   portraitImage: {fileID: 11405928}
   portraitName:
     m_uiText: {fileID: 11473894}
+    m_textMeshProUGUI: {fileID: 0}
   subtitleText:
     m_uiText: {fileID: 11489786}
+    m_textMeshProUGUI: {fileID: 0}
   addSpeakerName: 0
   addSpeakerNameFormat: '{0}: {1}'
   accumulateText: 0
@@ -3071,6 +3076,7 @@ MonoBehaviour:
   button: {fileID: 11438236}
   label:
     m_uiText: {fileID: 11499256}
+    m_textMeshProUGUI: {fileID: 0}
   setLabelColor: 1
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &3994075428067327857
@@ -3312,8 +3318,10 @@ MonoBehaviour:
   panel: {fileID: 11461418}
   label:
     m_uiText: {fileID: 11435794}
+    m_textMeshProUGUI: {fileID: 0}
   inputField:
     m_uiInputField: {fileID: 11483786}
+    m_textMeshProInputField: {fileID: 0}
   acceptKey: 13
   acceptButton: 
   cancelKey: 27
@@ -4333,6 +4341,7 @@ MonoBehaviour:
   pcImage: {fileID: 0}
   pcName:
     m_uiText: {fileID: 0}
+    m_textMeshProUGUI: {fileID: 0}
   usePortraitNativeSize: 0
   timerSlider: {fileID: 11484772}
   buttonAlignment: 0
