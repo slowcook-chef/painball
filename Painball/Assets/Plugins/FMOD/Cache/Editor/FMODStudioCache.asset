@@ -42,11 +42,38 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638643651612411888
+  lastModified: 638646416929772804
   FileSizes:
   - Name: 
-    Value: 1268
+    Value: 1524
   Exists: 1
+--- !u!114 &-5050020210340553785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ball_sink
+  m_EditorClassIdentifier: 
+  Path: event:/ball_sink
+  Guid:
+    Data1: -2039924685
+    Data2: 1089814270
+    Data3: 1222726567
+    Data4: -1388940637
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4156325243165923582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +208,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 10000
+--- !u!114 &-1267770537453069317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience_oneshots_scary
+  m_EditorClassIdentifier: 
+  Path: event:/ambience_oneshots_scary
+  Guid:
+    Data1: 1342437824
+    Data2: 1243629062
+    Data3: 1580208782
+    Data4: -1469135957
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1181498848935817944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,13 +283,16 @@ MonoBehaviour:
   - {fileID: -2258620949063524944}
   - {fileID: 6954628386998901069}
   - {fileID: -4156325243165923582}
+  - {fileID: 3404519220064078733}
+  - {fileID: -1267770537453069317}
+  - {fileID: -5050020210340553785}
   EditorParameters:
   - {fileID: -3239136303180314046}
   MasterBanks:
   - {fileID: 4533605037137124591}
   StringsBanks:
   - {fileID: -5311386387908567534}
-  cacheTime: 638643651612411888
+  cacheTime: 638646416929772804
   cacheVersion: 131620
 --- !u!114 &536011391653605596
 MonoBehaviour:
@@ -288,6 +345,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 188
+--- !u!114 &3404519220064078733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ambience_bed_lp
+  m_EditorClassIdentifier: 
+  Path: event:/ambience_bed_lp
+  Guid:
+    Data1: -282077528
+    Data2: 1316883306
+    Data3: 1923347366
+    Data4: 2051895073
+  Banks:
+  - {fileID: 4533605037137124591}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 18171
 --- !u!114 &4533605037137124591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +387,7 @@ MonoBehaviour:
   Path: Assets/FMODBanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638643651612391892
+  lastModified: 638646416929742798
   FileSizes: []
   Exists: 1
 --- !u!114 &5639007457564039591
