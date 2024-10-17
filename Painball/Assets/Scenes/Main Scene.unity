@@ -158,6 +158,47 @@ MonoBehaviour:
     onExecute:
       m_PersistentCalls:
         m_Calls: []
+  - guid: a064e6aa-4a23-43bf-94fa-ea5f6d631ae0
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1480761730}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: ShowBoard
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1699179735}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 519628038}
+          m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.DialogueSystemController,
+            Assembly-CSharp-firstpass
+          m_MethodName: StopConversation
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &72023040
 Transform:
   m_ObjectHideFlags: 0
@@ -829,6 +870,18 @@ Transform:
   - {fileID: 701519565}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519628038 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70,
+    type: 3}
+  m_PrefabInstance: {fileID: 375901789}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8b685e62a9aeb4a9472b30ec2d86d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &701519561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2299,7 +2352,7 @@ MonoBehaviour:
   allowBarksDuringConversations: 0
   skipBarkIfNoValidEntries: 0
   cacheBarkLines: 0
-  conversation: ??? Awakens
+  conversation: Spinny Hello
   conversationConversant: {fileID: 0}
   conversationActor: {fileID: 0}
   startConversationEntryID: -1
@@ -2339,7 +2392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64578247383140469c45370654a984a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actor: Beelzeball
+  actor: Spinny
   persistentDataName: 
   portrait: {fileID: 0}
   spritePortrait: {fileID: 21300000, guid: e1337c7ac02c1554382d68e213de11f0, type: 3}
@@ -2450,10 +2503,10 @@ MonoBehaviour:
   onExecute:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1480761730}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ShowBoard
-        m_Mode: 1
+      - m_Target: {fileID: 774231398}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
