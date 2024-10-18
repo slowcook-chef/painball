@@ -288,7 +288,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Casual Spinny, Portrait Image);
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: c9c3a3e7-fe88-4e4a-9fd5-2481abbafcf8
         type: 0
         typeString: 
       conversationID: 1
@@ -306,10 +310,24 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Actor["PlungerA"] = true,
+
+        Actor{''PlungerB"] = false'
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 80
@@ -381,11 +399,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -397,20 +415,28 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "[pic=2] Before we can begin, you\u2019ll need to sign something for
-          me."
+        value: "Before we can begin, you\u2019ll need to sign something for me."
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
-        value: AnimatorPlay(Teacher Spinny, Portrait Image);
+        value: 'AnimatorPlay(Teacher Spinny, Portrait Image);
+
+          SetActive(PlungerA,
+          false);
+
+          SetActive(PlungerB, true);'
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -430,7 +456,7 @@ MonoBehaviour:
       onExecute:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 9100000, guid: 8609510edf156cb41a7ad166e9310936, type: 2}
+          - m_Target: {fileID: 0}
             m_TargetAssemblyTypeName: 
             m_MethodName: 
             m_Mode: 1
@@ -444,7 +470,7 @@ MonoBehaviour:
             m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.6949
         y: 302
         width: 160
         height: 30
@@ -471,7 +497,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[pic=3] It\u2019s just a Terms of Use, no big deal!"
+        value: " It\u2019s just a Terms of Use, no big deal!"
         type: 0
         typeString: 
       - title: Sequence
@@ -502,8 +528,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1.1499999
+    canvasScrollPosition: {x: 6.8386126, y: 3.014}
+    canvasZoom: 1.1799998
   - id: 2
     fields:
     - title: Title
