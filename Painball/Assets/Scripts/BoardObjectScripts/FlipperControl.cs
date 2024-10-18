@@ -47,7 +47,7 @@ public class FlipperControl : MonoBehaviour
         }
         else
         {
-            motor.motorSpeed = -launchForce * 0.5f;  // Return to resting position
+            motor.motorSpeed = -launchForce * 10f;  // Return to resting position
         }
 
         hinge.motor = motor;

@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 //Make sure to check the "Is Trigger" box
-[RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class BallReset : MonoBehaviour
 {
 
