@@ -404,6 +404,10 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
+        value: AnimatorPlay(Teacher Spinny, Portrait Image);
+        type: 0
+        typeString: 
+      - title: Response Menu Sequence
         value: 
         type: 0
         typeString: 
@@ -425,7 +429,19 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 9100000, guid: 8609510edf156cb41a7ad166e9310936, type: 2}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 80
@@ -459,7 +475,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Teacher Spinny Smiling, Portrait Image);
         type: 0
         typeString: 
       - title: EventGuid
@@ -486,8 +502,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 27.887962}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.1499999
   - id: 2
     fields:
     - title: Title
@@ -612,10 +628,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Great! Thanks for signing that, you know how red tape can be.
-
-          Now
-          we can get into the game.'
+        value: Great! Thanks for signing that, you know how red tape can be. Now
+          we can get into the game.
         type: 0
         typeString: 
       - title: Sequence
@@ -670,8 +684,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "If you\u2019re new to pinball, select the \u2018Tutorial\u2019 button.\nIf
-          you\u2019re already a pro, go ahead and hit \u2018Play.\u2019\n"
+        value: "If you\u2019re new to pinball, select the \u2018Tutorial\u2019 button.
+          If you\u2019re already a pro, hit \u2018Play.\u2019\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -1307,7 +1321,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 28.72464, y: 23.215805}
+    canvasScrollPosition: {x: 0, y: 53.51442}
     canvasZoom: 1.6942477
   - id: 3
     fields:
