@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
 
     public void LoseLife(){
         lives -= 1;
+        if(lives<=0){
+            //you lost
+        }
+        //else spawn new ball
+        
     }
 
 

@@ -36,7 +36,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "Score: " + score.ToString(); // Update UI
+            scoreText.text = score.ToString(); // Update UI
         }
         //print("Score updated in UI: " + score); // Print to console
     }
