@@ -31,5 +31,6 @@ public class Mortality : MonoBehaviour
 
     public void Death(){
         // Death Sequence
+        _mortalityDisplay.LoadDeath();
     }
 }
