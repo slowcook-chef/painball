@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject boardParent;
+    [SerializeField ]private GameObject _boardParent;
     int lives = 3;
     // Start is called before the first frame update
     void Start()
@@ -14,11 +14,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void ShowBoard(){
-        boardParent.SetActive(true);
+        _boardParent.SetActive(true);
     }
 
     public void HideBoard(){
-        boardParent.SetActive(false);
+        _boardParent.SetActive(false);
     }
 
     public void LoseLife(){

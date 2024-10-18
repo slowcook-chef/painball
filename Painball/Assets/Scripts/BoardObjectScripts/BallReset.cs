@@ -9,7 +9,7 @@ public class BallReset : MonoBehaviour
 {
 
     public Transform resetPosition; // Set this to where you want the ball to respawn
-
+    [SerializeField]private Mortality _mortality;
     //audio events
     FMOD.Studio.EventInstance audio_ball_sink;
     FMOD.Studio.EventInstance audio_ambience_oneshot_scary;
@@ -29,7 +29,7 @@ public class BallReset : MonoBehaviour
         {
             other.transform.position = resetPosition.position; // Move the ball to the spawn position
             other.GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Reset the velocity
-
+            _mortality.LoseLife();
             //audio events
             audio_ambience_oneshot_scary.start();
             audio_ball_sink.start();
