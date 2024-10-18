@@ -3052,12 +3052,12 @@ PrefabInstance:
     - target: {fileID: 145528240468084812, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 13.033593
+      value: 12.824448
       objectReference: {fileID: 0}
     - target: {fileID: 145528240468084812, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 3.3903036
+      value: 2.9054933
       objectReference: {fileID: 0}
     - target: {fileID: 371579244123170061, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
@@ -3114,21 +3114,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1236520229129854395, guid: 603a4bd7c8740fd4f81398864092f439,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 36227028a80ba7d4196d3b4548d18924,
-        type: 3}
     - target: {fileID: 4248825078809708017, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 8.367789
+      value: 8.295789
       objectReference: {fileID: 0}
     - target: {fileID: 4248825078809708017, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.4352283
+      value: -1.9702286
       objectReference: {fileID: 0}
     - target: {fileID: 4863607549839983369, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
@@ -3138,7 +3132,7 @@ PrefabInstance:
     - target: {fileID: 4863607549839983369, guid: 603a4bd7c8740fd4f81398864092f439,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.4269944
+      value: -1.9669945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
