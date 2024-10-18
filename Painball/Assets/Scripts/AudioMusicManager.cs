@@ -15,7 +15,7 @@ public class AudioMusicManager : MonoBehaviour
         audio_painball_music = FMODUnity.RuntimeManager.CreateInstance("event:/painball_music");
 
         //start the music
-        audio_painball_music.start();
+        //PlayMusic();
     }
     void Update()
     {
@@ -24,6 +24,15 @@ public class AudioMusicManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        StopMusic();
         audio_painball_music.release();
+    }
+
+    public void StopMusic(){
+        audio_painball_music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+    public void PlayMusic(){
+        audio_painball_music.start();
+
     }
 }

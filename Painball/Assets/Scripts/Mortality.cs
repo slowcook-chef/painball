@@ -20,7 +20,7 @@ public class Mortality : MonoBehaviour
     // Start is called before the first frame update
     public void LoseLife()
     {
-        if (lives < 0)
+        if (lives <= 0)
         {
             Death();
             return;

@@ -42,6 +42,15 @@ public class BallReset : MonoBehaviour
         audio_ball_sink.release();
     }
 
+    public void ResetBall(GameObject other){
+        other.transform.position = resetPosition.position; // Move the ball to the spawn position
+        other.GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Reset the velocity
+        _mortality.LoseLife();
+        //audio events
+        audio_ambience_oneshot_scary.start();
+        audio_ball_sink.start();
+    }
+
 
 }
 

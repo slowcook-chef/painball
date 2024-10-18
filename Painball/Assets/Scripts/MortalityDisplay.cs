@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MortalityDisplay : MonoBehaviour
 {
-    [SerializeField]private string deathSceneName;
+    [SerializeField]private string deathSceneName="DeathScene";
     public SpriteRenderer[] ballIcons;
 
     public void ShowLife(int life){

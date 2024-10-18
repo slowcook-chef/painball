@@ -5,29 +5,22 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField ]private GameObject _boardParent;
-    int lives = 3;
+    [SerializeField ]private AudioMusicManager _music;
+    
     // Start is called before the first frame update
     void Start()
     {
-        HideBoard();
-        
+        HideObject(_boardParent);
+        _music.StopMusic();
     }
 
-    public void ShowBoard(){
-        _boardParent.SetActive(true);
+    public void ShowObject(GameObject target){
+        target.SetActive(true);
+        _music.PlayMusic();
     }
 
-    public void HideBoard(){
-        _boardParent.SetActive(false);
-    }
-
-    public void LoseLife(){
-        lives -= 1;
-        if(lives<=0){
-            //you lost
-        }
-        //else spawn new ball
-        
+    public void HideObject(GameObject target){
+        target.SetActive(false);
     }
 
 

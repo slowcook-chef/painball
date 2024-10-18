@@ -357,8 +357,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I\u2019m so excited that you\u2019re here! Are you ready to challenge
-          my high score?"
+        value: "I\u2019m so excited that you\u2019re here!"
         type: 0
         typeString: 
       - title: Sequence
@@ -528,7 +527,7 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 6.8386126, y: 3.014}
+    canvasScrollPosition: {x: 5.6497498, y: 19.398201}
     canvasZoom: 1.1799998
   - id: 2
     fields:
@@ -654,8 +653,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: Great! Thanks for signing that, you know how red tape can be. Now
-          we can get into the game.
+        value: Great! Thanks for signing that. Now we can get into the game.
         type: 0
         typeString: 
       - title: Sequence
@@ -745,8 +743,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 130
+        x: 160.66385
+        y: 130.66385
         width: 160
         height: 30
     - id: 5
@@ -772,7 +770,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Read you loud and clear, partner! Let''s go over the basics:'
+        value: 'Let''s go over the basics:'
         type: 0
         typeString: 
       - title: Sequence
@@ -827,7 +825,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=2] blah blah blah blah blah blah blah blah blah blah '
+        value: '[pic=2] Press "Space" to launch the ball'
         type: 0
         typeString: 
       - title: Sequence
@@ -882,7 +880,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=2] blah blah blah blah blah blah blah blah blah blah '
+        value: '[pic=2] Press "Z" and "C" for flipper control'
         type: 0
         typeString: 
       - title: Sequence
@@ -910,7 +908,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.666664
+        x: 39.994347
         y: 377.33334
         width: 160
         height: 30
@@ -937,7 +935,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=3] blah blah blah let''s try it out!'
+        value: '[pic=3] Thats it! Dont Die!'
         type: 0
         typeString: 
       - title: Sequence
@@ -951,7 +949,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 8
+        destinationConversationID: 2
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -959,8 +963,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.666664
-        y: 427.33334
+        x: 35.347427
+        y: 439.94644
         width: 160
         height: 30
     - id: 9
@@ -1096,7 +1100,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] My high score on this level is [SCORE]!'
+        value: '[pic=4] My high score on this level is 6,000!'
         type: 0
         typeString: 
       - title: Sequence
@@ -1151,7 +1155,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] Do you think you''ve got what it takes to crush that number??'
+        value: '[pic=4] Do you have what it takes to crush that number??'
         type: 0
         typeString: 
       - title: Sequence
@@ -1179,7 +1183,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283.3333
+        x: 287.31635
         y: 430
         width: 160
         height: 30
@@ -1232,8 +1236,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283.3333
-        y: 480
+        x: 281.34177
+        y: 479.33618
         width: 160
         height: 30
     - id: 14
@@ -1347,8 +1351,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 53.51442}
-    canvasZoom: 1.6942477
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1.0042484
   - id: 3
     fields:
     - title: Title
