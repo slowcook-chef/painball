@@ -4,52 +4,23 @@ using UnityEngine;
 
 public class AudioSettings : MonoBehaviour
 {
-
-    FMOD.Studio.EventInstance SFXVolumeTestEvent;
-
-    FMOD.Studio.Bus Music;
-    FMOD.Studio.Bus SFX;
-    FMOD.Studio.Bus Master;
-    float MusicVolume = 0.5f;
-    float SFXVolume = 0.5f;
-    float MasterVolume = 1f;
+    FMOD.Studio.Bus PinballMachine;
+    float PinballMachineVolume = 1f;
 
     void Awake()
     {
-        Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
-        SFX = FMODUnity.RuntimeManager.GetBus("bus:/Master/SFX");
-        Master = FMODUnity.RuntimeManager.GetBus("bus:/Master");
-        SFXVolumeTestEvent = FMODUnity.RuntimeManager.CreateInstance("event:/SFX/SFXVolumeTest");
+        // Initialize the PinballMachine bus
+        PinballMachine = FMODUnity.RuntimeManager.GetBus("bus:/pinball_machine");
     }
 
     void Update()
     {
-        Music.setVolume(MusicVolume);
-        SFX.setVolume(SFXVolume);
-        Master.setVolume(MasterVolume);
+        // Set the volume only for the PinballMachine bus
+        PinballMachine.setVolume(PinballMachineVolume);
     }
 
-    public void MasterVolumeLevel(float newMasterVolume)
+    public void PinballMachineVolumeLevel(float newPinballMachineVolume)
     {
-        MasterVolume = newMasterVolume;
+        PinballMachineVolume = newPinballMachineVolume;
     }
-
-    public void MusicVolumeLevel(float newMusicVolume)
-    {
-        MusicVolume = newMusicVolume;
-    }
-
-    public void SFXVolumeLevel(float newSFXVolume)
-    {
-        SFXVolume = newSFXVolume;
-
-        FMOD.Studio.PLAYBACK_STATE PbState;
-        SFXVolumeTestEvent.getPlaybackState(out PbState);
-        if (PbState != FMOD.Studio.PLAYBACK_STATE.PLAYING)
-        {
-            SFXVolumeTestEvent.start();
-        }
-    }
-
-    
 }
