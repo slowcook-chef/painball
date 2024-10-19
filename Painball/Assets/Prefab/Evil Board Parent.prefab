@@ -2564,7 +2564,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8872954601022614099
 Transform:
   m_ObjectHideFlags: 0
@@ -2995,6 +2995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resetPosition: {fileID: 7840783929156178374}
+  _mortality: {fileID: 0}
 --- !u!1 &7867820322609737253
 GameObject:
   m_ObjectHideFlags: 0
@@ -3721,6 +3722,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042297362763427910, guid: 1aaaf915465de184e82a29b25425f80a,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 1.521127
+      objectReference: {fileID: 0}
+    - target: {fileID: 6042297362763427910, guid: 1aaaf915465de184e82a29b25425f80a,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.7569945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
