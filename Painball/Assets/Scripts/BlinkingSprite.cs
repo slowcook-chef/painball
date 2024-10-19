@@ -11,6 +11,10 @@ public class BlinkingSprite : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Main Scene");
+        }
         alpha = Mathf.PingPong(Time.time * blinkSpeed, 1.0f);
         Color color = tmpRenderer.color;
         color.a = alpha;

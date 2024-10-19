@@ -10,7 +10,8 @@ public class ScoreManager : MonoBehaviour
     public GameManager gameManager;
     public int score = 0;  // Player's current score
     public int highscoreSmall=6660;
-    public int highscoreBig=66600;
+    public int highscoreMedium = 66600;
+    public int highscoreBig=666000;
     public TMP_Text scoreText; // TMPro component to display the score
     public TMP_Text highscoreText;
 
@@ -52,11 +53,14 @@ public class ScoreManager : MonoBehaviour
     public void CompareHighscore(){
         if(score > highscoreBig){
             // WIN
-
+            gameManager.Win();
+        }
+        else if(score > highscoreMedium){
+            //Level
         }
         else if(score > highscoreSmall){
             // Game manager unlock evil board
-            gameManager.StartDemonicBoard();
+            gameManager.EasyLevelBeaten();
         }
         //do nothing
     }
