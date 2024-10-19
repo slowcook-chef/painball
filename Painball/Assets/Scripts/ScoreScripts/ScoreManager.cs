@@ -15,9 +15,12 @@ public class ScoreManager : MonoBehaviour
     public TMP_Text highscoreText;
 
     // Ensure that only one instance of ScoreManager exists
-    void Awake()
+    void Start()
     {
-        
+        gameManager = FindFirstObjectByType<GameManager>();
+        if(gameManager==null){
+            print("Game manager null, you might be in trouble");
+        }
     }
 
     // Method to reset the score

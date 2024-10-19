@@ -19,7 +19,7 @@ public class Slingshot : MonoBehaviour
         //audio assign audio events
         audio_slingshot_hit = FMODUnity.RuntimeManager.CreateInstance("event:/slingshot_hit");
         //attach audio location to object location
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_slingshot_hit, transform, GetComponent<Rigidbody2D>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_slingshot_hit, gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

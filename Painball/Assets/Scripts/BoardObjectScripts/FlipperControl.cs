@@ -34,8 +34,8 @@ public class FlipperControl : MonoBehaviour
         //audio assigning audio events
         audio_flipper_up = FMODUnity.RuntimeManager.CreateInstance("event:/flipper_up");
         audio_flipper_down = FMODUnity.RuntimeManager.CreateInstance("event:/flipper_down");
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_up, transform, GetComponent<Rigidbody2D>());
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_down, transform, GetComponent<Rigidbody2D>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_up, gameObject);
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_flipper_down, gameObject);
     }
 
     void Update()

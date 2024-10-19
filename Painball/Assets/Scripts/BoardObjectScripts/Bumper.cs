@@ -13,7 +13,7 @@ public class Bumper : MonoBehaviour
         //assign audio event instances
         audio_bumper_hit = FMODUnity.RuntimeManager.CreateInstance("event:/bumper_hit");
         //attach audio location to the game object location
-        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_bumper_hit, transform, GetComponent<Rigidbody2D>());
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(audio_bumper_hit, gameObject);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
