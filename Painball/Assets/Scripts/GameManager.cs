@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public void ShowObject(GameObject target){
         target.SetActive(true);
-        _music.PlayMusic();
+        //_music.PlayMusic();
     }
 
     public void HideObject(GameObject target){
