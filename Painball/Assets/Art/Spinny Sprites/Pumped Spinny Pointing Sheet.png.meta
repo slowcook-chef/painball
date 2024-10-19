@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff66c050b2f2b2745badd1594388def0
+guid: edcb854ff039c27468222227f0af66d4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_0
+      name: Pumped Spinny Pointing Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -111,14 +111,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6c7692fa32cae4498aae1ff9e4140f8
-      internalID: 1106275125
+      spriteID: 035c5f9a3064be141ac7d09fda3ec6f7
+      internalID: -287695917
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_1
+      name: Pumped Spinny Pointing Sheet_1
       rect:
         serializedVersion: 2
         x: 512
@@ -132,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d968f02c136b8dd4eb46c00f38a1ae1e
-      internalID: 1064186525
+      spriteID: efd14276fbd0098448480bead8b6035d
+      internalID: -1998580096
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_2
+      name: Pumped Spinny Pointing Sheet_2
       rect:
         serializedVersion: 2
         x: 1024
@@ -153,14 +153,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4c577157cb546a408e6037b6e05042f
-      internalID: -2020506440
+      spriteID: c718683b548e59c409fd6a1c6f68cc3c
+      internalID: -194142377
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_3
+      name: Pumped Spinny Pointing Sheet_3
       rect:
         serializedVersion: 2
         x: 1536
@@ -174,8 +174,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39bd5acc758a64048b373aa720a878ed
-      internalID: -1458419014
+      spriteID: baa0ff8d42f9f554b9ebcc144bd64458
+      internalID: 153188656
       vertices: []
       indices: 
       edges: []
@@ -191,10 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Beelzeball Shocked Sheet_0: 1106275125
-      Beelzeball Shocked Sheet_1: 1064186525
-      Beelzeball Shocked Sheet_2: -2020506440
-      Beelzeball Shocked Sheet_3: -1458419014
+      Pumped Spinny Pointing Sheet_0: -287695917
+      Pumped Spinny Pointing Sheet_1: -1998580096
+      Pumped Spinny Pointing Sheet_2: -194142377
+      Pumped Spinny Pointing Sheet_3: 153188656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

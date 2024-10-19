@@ -125,7 +125,7 @@ MonoBehaviour:
       type: 2
       typeString: CustomFieldType_Boolean
     portrait: {fileID: 0}
-    spritePortrait: {fileID: 0}
+    spritePortrait: {fileID: 21300000, guid: acad313d126b4c549bde352d6a51e8f1, type: 3}
     alternatePortraits: []
     spritePortraits: []
   items: []
@@ -288,7 +288,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Casual Spinny, Portrait Image);
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: c9c3a3e7-fe88-4e4a-9fd5-2481abbafcf8
         type: 0
         typeString: 
       conversationID: 1
@@ -306,10 +310,24 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Actor["PlungerA"] = true,
+
+        Actor{''PlungerB"] = false'
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
         x: 80
@@ -339,8 +357,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I\u2019m so excited that you\u2019re here! Are you ready to challenge
-          my high score?"
+        value: "I\u2019m so excited that you\u2019re here!"
         type: 0
         typeString: 
       - title: Sequence
@@ -372,7 +389,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.129944
         y: 218
         width: 160
         height: 30
@@ -381,11 +398,11 @@ MonoBehaviour:
       - title: Title
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Description
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Actor
         value: 2
         type: 5
@@ -397,16 +414,28 @@ MonoBehaviour:
       - title: Menu Text
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "[pic=2] Before we can begin, you\u2019ll need to sign something for
-          me."
+        value: "Before we can begin, you\u2019ll need to sign something for me."
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
       - title: Sequence
+        value: 'AnimatorPlay(Teacher Spinny, Portrait Image);
+
+          SetActive(PlungerA,
+          false);
+
+          SetActive(PlungerB, true);'
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Response Menu Sequence
         value: 
         type: 0
-        typeString: 
+        typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
       conversationID: 1
       isRoot: 0
       isGroup: 0
@@ -425,10 +454,22 @@ MonoBehaviour:
       userScript: 
       onExecute:
         m_PersistentCalls:
-          m_Calls: []
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
       canvasRect:
         serializedVersion: 2
-        x: 80
+        x: 81.6949
         y: 302
         width: 160
         height: 30
@@ -455,11 +496,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "[pic=3] It\u2019s just a Terms of Use, no big deal!"
+        value: " It\u2019s just a Terms of Use, no big deal!"
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Teacher Spinny Smiling, Portrait Image);
         type: 0
         typeString: 
       - title: EventGuid
@@ -481,13 +522,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 80
-        y: 386
+        x: 78.74214
+        y: 387.25784
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 27.887962}
-    canvasZoom: 1.06
+    canvasScrollPosition: {x: 5.6497498, y: 19.398201}
+    canvasZoom: 1.1799998
   - id: 2
     fields:
     - title: Title
@@ -569,7 +610,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 2
@@ -585,8 +626,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 169.44583
+        y: 12.87944
         width: 160
         height: 30
     - id: 1
@@ -612,10 +653,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Great! Thanks for signing that, you know how red tape can be.
-
-          Now
-          we can get into the game.'
+        value: Great! Thanks for signing that. Now we can get into the game.
         type: 0
         typeString: 
       - title: Sequence
@@ -670,8 +708,8 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "If you\u2019re new to pinball, select the \u2018Tutorial\u2019 button.\nIf
-          you\u2019re already a pro, go ahead and hit \u2018Play.\u2019\n"
+        value: "If you\u2019re new to pinball, select the \u2018Tutorial\u2019 button.
+          If you\u2019re already a pro, hit \u2018Play.\u2019\n"
         type: 0
         typeString: 
       - title: Sequence
@@ -689,13 +727,13 @@ MonoBehaviour:
       - originConversationID: 2
         originDialogueID: 2
         destinationConversationID: 2
-        destinationDialogueID: 3
+        destinationDialogueID: 14
         isConnector: 0
         priority: 2
       - originConversationID: 2
         originDialogueID: 2
         destinationConversationID: 2
-        destinationDialogueID: 4
+        destinationDialogueID: 15
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -705,118 +743,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 130
-        width: 160
-        height: 30
-    - id: 3
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: TUTORIAL
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 3
-        destinationConversationID: 2
-        destinationDialogueID: 5
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 55.33333
-        y: 200
-        width: 160
-        height: 30
-    - id: 4
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 2
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: PLAY
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 2
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 2
-        originDialogueID: 4
-        destinationConversationID: 2
-        destinationDialogueID: 9
-        isConnector: 0
-        priority: 2
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 272.66666
-        y: 202
+        x: 161.84457
+        y: 130.66385
         width: 160
         height: 30
     - id: 5
@@ -842,11 +770,16 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 'Read you loud and clear, partner! Let''s go over the basics:'
+        value: 'Let''s go over the basics:'
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorPlay(Teacher Spinny, Portrait Image);
+
+          SetActive(PlungerA,
+          false);
+
+          SetActive(PlungerB, true);'
         type: 0
         typeString: 
       conversationID: 2
@@ -897,7 +830,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=2] blah blah blah blah blah blah blah blah blah blah '
+        value: '[pic=2] Press "Space" to launch the ball'
         type: 0
         typeString: 
       - title: Sequence
@@ -925,7 +858,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.666664
+        x: 39.257042
         y: 327.33334
         width: 160
         height: 30
@@ -952,7 +885,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=2] blah blah blah blah blah blah blah blah blah blah '
+        value: '[pic=2] Press "Z" and "C" for flipper control'
         type: 0
         typeString: 
       - title: Sequence
@@ -980,7 +913,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.666664
+        x: 39.994347
         y: 377.33334
         width: 160
         height: 30
@@ -1007,11 +940,13 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=3] blah blah blah let''s try it out!'
+        value: '[pic=3] Thats it! Dont Die!'
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: 'AnimatorPlay(Teacher Spinny Smiling, Portrait Image);
+
+'
         type: 0
         typeString: 
       conversationID: 2
@@ -1021,7 +956,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 8
+        destinationConversationID: 2
+        destinationDialogueID: 17
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -1029,8 +970,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 38.666664
-        y: 427.33334
+        x: 35.347427
+        y: 439.94644
         width: 160
         height: 30
     - id: 9
@@ -1084,8 +1025,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283.3333
-        y: 280
+        x: 280.18542
+        y: 268.98233
         width: 160
         height: 30
     - id: 10
@@ -1166,7 +1107,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] My high score on this level is [SCORE]!'
+        value: '[pic=4] My high score on this level is 6,660!'
         type: 0
         typeString: 
       - title: Sequence
@@ -1221,11 +1162,70 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] Do you think you''ve got what it takes to crush that number??'
+        value: '[pic=4] Do you have what it takes to crush that number??'
         type: 0
         typeString: 
       - title: Sequence
         value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 12
+        destinationConversationID: 2
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 287.31635
+        y: 430
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: a064e6aa-4a23-43bf-94fa-ea5f6d631ae0
         type: 0
         typeString: 
       conversationID: 2
@@ -1243,13 +1243,176 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 283.3333
-        y: 430
+        x: 287.4471
+        y: 501.43927
+        width: 160
+        height: 30
+    - id: 14
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Tutorial
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 14
+        destinationConversationID: 2
+        destinationDialogueID: 5
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 48.64279
+        y: 199.28088
+        width: 160
+        height: 30
+    - id: 15
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: Play
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 2
+        originDialogueID: 15
+        destinationConversationID: 2
+        destinationDialogueID: 9
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 267.0288
+        y: 201.64188
+        width: 160
+        height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      - title: EventGuid
+        value: c8f63cbf-f1f1-4b45-a83e-cbdba3917c4a
+        type: 0
+        typeString: 
+      conversationID: 2
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 37.32862
+        y: 502.6902
         width: 160
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8842485
+    canvasZoom: 0.79449654
   - id: 3
     fields:
     - title: Title
@@ -1708,7 +1871,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Beelzelball, Portrait Image);
         type: 0
         typeString: 
       conversationID: 3
@@ -1732,7 +1895,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasZoom: 0.8895004
   - id: 4
     fields:
     - title: Title
@@ -2204,8 +2367,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 130
+        x: 158.66666
+        y: 130.66667
         width: 160
         height: 30
     - id: 3
@@ -2412,8 +2575,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 30
+        x: 166.4271
+        y: 1
         width: 160
         height: 30
     - id: 1
@@ -2443,7 +2606,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Beelzeball Shocked, Portrait Image);
         type: 0
         typeString: 
       conversationID: 6
@@ -2457,7 +2620,7 @@ MonoBehaviour:
       - originConversationID: 6
         originDialogueID: 1
         destinationConversationID: 6
-        destinationDialogueID: 2
+        destinationDialogueID: 17
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -2467,8 +2630,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 80
+        x: 169.93283
+        y: 50.2016
         width: 160
         height: 30
     - id: 2
@@ -2498,7 +2661,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Beelzeball Shocked Still, Portrait Image);
         type: 0
         typeString: 
       conversationID: 6
@@ -2522,8 +2685,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 130
+        x: 166.42706
+        y: 137.59567
         width: 160
         height: 30
     - id: 3
@@ -2578,7 +2741,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 160
-        y: 180
+        y: 184.00056
         width: 160
         height: 30
     - id: 4
@@ -2663,7 +2826,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Melting Beelzeball, Portrait Image);
         type: 0
         typeString: 
       conversationID: 6
@@ -2845,12 +3008,6 @@ MonoBehaviour:
         destinationDialogueID: 9
         isConnector: 0
         priority: 2
-      - originConversationID: 6
-        originDialogueID: 8
-        destinationConversationID: 6
-        destinationDialogueID: 10
-        isConnector: 0
-        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2899,7 +3056,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 9
+        destinationConversationID: 6
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: 
       onExecute:
@@ -2907,8 +3070,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 480
+        x: 159.99998
+        y: 491.33337
         width: 160
         height: 30
     - id: 10
@@ -2922,7 +3085,337 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
         value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: You did it <b>again</b>?
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 10
+        destinationConversationID: 6
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 161.99995
+        y: 541.99994
+        width: 160
+        height: 30
+    - id: 11
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: <b><color=red>youdiditagainyoudiditagainyoudiditagain</color></b>
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AnimatorPlay(Melting Beelzeball Spasm, Portrait Image);
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 11
+        destinationConversationID: 6
+        destinationDialogueID: 18
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 164.63557
+        y: 600.6045
+        width: 160
+        height: 30
+    - id: 12
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: .........
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AnimatorPlay(Melting Beelzeball, Portrait Image);
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 12
+        destinationConversationID: 6
+        destinationDialogueID: 13
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160.37434
+        y: 739.4011
+        width: 160
+        height: 30
+    - id: 13
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: .........
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 13
+        destinationConversationID: 6
+        destinationDialogueID: 14
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 157.8427
+        y: 790.24506
+        width: 160
+        height: 30
+    - id: 14
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: .....But.....not.... again.....
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: AnimatorPlay(Splitting Spinny, Portrait Image);
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 14
+        destinationConversationID: 6
+        destinationDialogueID: 15
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 158.56374
+        y: 864.52094
+        width: 160
+        height: 30
+    - id: 15
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: .................................
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 15
+        destinationConversationID: 6
+        destinationDialogueID: 16
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 160.32219
+        y: 916.2794
+        width: 160
+        height: 30
+    - id: 16
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 4
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
@@ -2934,11 +3427,11 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: 
+        value: "<color=red>\u2026.. n\u2026o\u2026t\u2026. T\u2026H\u2026I\u2026.S\u2026.t\u2026.i\u2026.m\u2026..e\u2026..</color>"
         type: 0
         typeString: 
       - title: Sequence
-        value: 
+        value: AnimatorPlay(Unknown Spinny, Portrait Image);
         type: 0
         typeString: 
       conversationID: 6
@@ -2956,13 +3449,178 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 160
-        y: 480
+        x: 160.32219
+        y: 966.2794
+        width: 160
+        height: 30
+    - id: 17
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: I-I-I-It wasn't supposed to... be p-possible....
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 17
+        destinationConversationID: 6
+        destinationDialogueID: 2
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 164.67427
+        y: 94.82118
+        width: 160
+        height: 30
+    - id: 18
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: <b><color=red>youdiditagainyoudiditagainyoudiditagain</color></b>
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 18
+        destinationConversationID: 6
+        destinationDialogueID: 19
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 174.63127
+        y: 644.5616
+        width: 160
+        height: 30
+    - id: 19
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 3
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: <b><color=red>youdiditagainyoudiditagainyoudiditagain</color></b>
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: 
+      conversationID: 6
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 6
+        originDialogueID: 19
+        destinationConversationID: 6
+        destinationDialogueID: 12
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 174.0114
+        y: 688.363
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 71.59848, y: 623.93085}
+    canvasZoom: 0.87825114
   syncInfo:
     syncActors: 0
     syncItems: 0

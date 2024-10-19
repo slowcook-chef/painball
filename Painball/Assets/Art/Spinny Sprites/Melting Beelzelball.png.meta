@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff66c050b2f2b2745badd1594388def0
+guid: b66b7873149d9384d827d63d45d3cdd0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -95,91 +95,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f6c7692fa32cae4498aae1ff9e4140f8
-      internalID: 1106275125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d968f02c136b8dd4eb46c00f38a1ae1e
-      internalID: 1064186525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4c577157cb546a408e6037b6e05042f
-      internalID: -2020506440
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Beelzeball Shocked Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39bd5acc758a64048b373aa720a878ed
-      internalID: -1458419014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -190,11 +106,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Beelzeball Shocked Sheet_0: 1106275125
-      Beelzeball Shocked Sheet_1: 1064186525
-      Beelzeball Shocked Sheet_2: -2020506440
-      Beelzeball Shocked Sheet_3: -1458419014
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
