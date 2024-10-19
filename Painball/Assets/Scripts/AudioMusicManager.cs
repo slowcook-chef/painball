@@ -16,6 +16,7 @@ public class AudioMusicManager : MonoBehaviour
 
         //start the music
         //PlayMusic();
+        //StopMusic();
     }
     void Update()
     {
@@ -29,10 +30,11 @@ public class AudioMusicManager : MonoBehaviour
     }
 
     public void StopMusic(){
-        audio_painball_music.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        audio_painball_music.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        
     }
-    public void PlayMusic(){
+    public void PlayMusic(int state){
+        hell_state = state;
         audio_painball_music.start();
-
     }
 }

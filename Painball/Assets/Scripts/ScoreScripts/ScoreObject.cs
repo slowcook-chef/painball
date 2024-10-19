@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class ScoringObject : MonoBehaviour
 {
     public int scoreValue = 100;  // Score awarded when hit
+    public ScoreManager scoreManager;
     public AudioClip hitSound;     // Sound effect for when the object is hit
     private AudioSource audioSource;
 
@@ -20,7 +21,7 @@ public class ScoringObject : MonoBehaviour
     {
         if (collision2D.gameObject.CompareTag("Ball"))  // Check if the colliding object is the ball
         {
-            ScoreManager.instance.AddScore(scoreValue);  // Add score
+            scoreManager.AddScore(scoreValue);  // Add score
             //Debug.Log("Ball hit scoring object. Score added: " + scoreValue); // Debug log
 
             // Play hit sound if it's set

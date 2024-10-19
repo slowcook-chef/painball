@@ -1106,7 +1106,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] My high score on this level is 6,000!'
+        value: '[pic=4] My high score on this level is 6,660!'
         type: 0
         typeString: 
       - title: Sequence
